@@ -6,6 +6,24 @@
 // Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 // You must do it in place.
 
+/*
+Logic: 
+First I will calculate the number of rows and number of columns of matrix.
+
+Basic trick, If there is a cell whose value is zero in the matrix, then set the value of first column's corresponding cell and also set the value of first row's corresponding cell to zero
+
+Trap: 
+If we set the values of first column's cell, then while traversing the first column's cells, we can encounter a zero
+and because of the whole row's cells become zero too. This is the downfall of this algo, we have to avoid.
+
+In order to avoid this downfall, we will iterate over the matrix starting from second column.
+and will keep a valriable named isFirstColumnZero to check if there is any cell in first column whose value is zero.
+If yes, then we'll set the whole column's cell's value as zero
+
+In case of first row, we are keeping the first element as zero (as an indicator that yes there is a cell in forst row whose value is zero)
+If the first element of matrix (matrix[0][0] == 0) then we'll set the all the first row's cell's value to be zero.
+*/
+
 // Cpp code:
 
 // Chirag
