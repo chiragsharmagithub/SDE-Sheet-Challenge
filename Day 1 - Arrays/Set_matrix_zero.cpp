@@ -30,6 +30,8 @@ If the first element of matrix (matrix[0][0] == 0) then we'll set the all the fi
 // TC: O(N * M)
 // SC: O(1)
 
+// where N, M are the number of rows (i) and columns (j)
+
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
